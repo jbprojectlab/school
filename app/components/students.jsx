@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {getStudents} from '../reducers/student'
+import {Link} from 'react-router-dom'
+import {getStudents} from '../reducers/students'
 
 class Students extends Component {
 	componentDidMount() {
@@ -15,8 +16,10 @@ class Students extends Component {
         <ul>
           {students && students.map(student => (
             <li key={student.id}>
-              <h4>{student.firstName + ' ' + student.lastName}</h4>
-              <img src={student.imageURL} />
+              <Link to={`/students/${student.id}`}>
+                <h4>{student.firstName + ' ' + student.lastName}</h4>
+                <img src={student.imageURL} />
+              </Link>
             </li>
           ))}
         </ul>

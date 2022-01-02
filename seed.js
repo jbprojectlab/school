@@ -3,51 +3,7 @@ const {green, red} = require('chalk')
 
 const {Campus, Student} = require('./server/db/models');
 
-const students = [{
-  firstName: 'Sammy',
-  lastName: 'The Cage',
-  email: 'sammy_the_cage_123454332@gmail.com',
-  imageURL: 'https://www.placecage.com/149/300',
-  gpa: 4.0
-}, {
-  firstName: 'Ben',
-  lastName: `"You Can't Cage Me" Cage`,
-  email: 'ben_123454332@gmail.com',
-  imageURL: 'https://www.placecage.com/207/300',
-  gpa: 3.8
-}, {
-  firstName: 'Nick',
-  lastName: 'Cage',
-  email: 'nick_C_123454332@gmail.com',
-  imageURL: 'https://www.placecage.com/200/300',
-  gpa: 1.3
-}, {
-  firstName: 'Batman',
-  lastName: 'Nick',
-  email: 'batman_123454332@gmail.com',
-  imageURL: 'http://4.bp.blogspot.com/-wkdrHUo_2bw/VFN8AwcBfuI/AAAAAAAAfn8/ZmSLil8JwoY/s1600/Superman-Lives-criticsight-imagen-nicolas-cage-4.png',
-  gpa: 2.8
-},
-{
-  firstName: 'Super',
-  lastName: 'Cage',
-  email: 'super_123454332@gmail.com',
-  imageURL: 'https://www.placecage.com/27/300',
-  gpa: 2.8
-}]
-
-const campuses = [{
-  name: 'Beach Campus',
-  imageURL: 'https://indianharbourbeach.org/vertical/Sites/%7B427C9040-E7BF-47FF-B72A-4E9FC9F68BCE%7D/uploads/sathigh-1170x420.jpg',
-  address: '123 Beach Street, Webpack City, JS',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla egestas dui eget mollis. Etiam tincidunt tincidunt orci ut feugiat. Nunc justo enim, feugiat vel eleifend in, egestas id velit. Fusce ultrices convallis nunc, sit amet vestibulum odio auctor in. Morbi id neque volutpat urna commodo venenatis. Quisque sed turpis et quam semper posuere id non sapien. Nam ullamcorper tincidunt lectus, commodo varius ipsum facilisis ac. Nunc dapibus est nisi, ut ultrices tellus rutrum quis.'
-},
-{
-  name: 'Mansion Campus',
-  imageURL: 'https://i.ytimg.com/vi/MARPpXuTi7k/maxresdefault.jpg',
-  address: 'Campus of Cages, 17 Cage Courtyard',
-  description: 'Home to all posh future Cage de Nicolas'
-},
+const campuses = [
 {
   name: 'Forest Campus',
   imageURL: 'https://www.collegeconsensus.com/wp-content/uploads/2016/12/Wake-Forest-1024x400.jpg',
@@ -73,15 +29,117 @@ const campuses = [{
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla egestas dui eget mollis. Etiam tincidunt tincidunt orci ut feugiat. Nunc justo enim, feugiat vel eleifend in, egestas id velit. Fusce ultrices convallis nunc, sit amet vestibulum odio auctor in. Morbi id neque volutpat urna commodo venenatis. Quisque sed turpis et quam semper posuere id non sapien. Nam ullamcorper tincidunt lectus, commodo varius ipsum facilisis ac. Nunc dapibus est nisi, ut ultrices tellus rutrum quis.'
 }]
 
+const students = [{
+  firstName: 'Sammy',
+  lastName: 'Syntax',
+  email: 'sammy_syntax_123454332@gmail.com',
+  imageURL: 'https://randomuser.me/api/portraits/men/44.jpg',
+  gpa: 4.0,
+  campusId: 3
+}, {
+  firstName: 'Carl',
+  lastName: 'Coder',
+  email: 'ben_123454332@gmail.com',
+  imageURL: 'https://randomuser.me/api/portraits/men/28.jpg',
+  gpa: 3.8,
+  campusId: 2
+}, {
+  firstName: 'Nick',
+  lastName: 'Hacker',
+  email: 'nick_hacker_123454332@gmail.com',
+  imageURL: 'https://randomuser.me/api/portraits/men/73.jpg',
+  gpa: 1.3,
+  campusId: 2
+}, {
+  firstName: 'Scott',
+  lastName: 'Scripter',
+  email: 'scott_scripter_123454332@gmail.com',
+  imageURL: 'https://randomuser.me/api/portraits/men/57.jpg',
+  gpa: 2.8,
+  campusId: 1
+},
+{
+  firstName: 'Kevin',
+  lastName: 'Component',
+  email: 'kevin_c_123454332@gmail.com',
+  imageURL: 'https://randomuser.me/api/portraits/men/94.jpg',
+  gpa: 2.4,
+  campusId: 2
+},
+{
+  firstName: 'Ron',
+  lastName: 'React',
+  email: 'super_123454332@gmail.com',
+  imageURL: 'https://randomuser.me/api/portraits/men/18.jpg',
+  gpa: 3.7,
+  campusId: 3
+},
+{
+  firstName: 'Bob',
+  lastName: 'Redux',
+  email: 'bob_redux_123454332@gmail.com',
+  imageURL: 'https://randomuser.me/api/portraits/men/27.jpg',
+  gpa: 2.5,
+  campusId: 1
+},
+{
+  firstName: 'John',
+  lastName: 'JavaScript',
+  email: 'john_js_123454332@gmail.com',
+  imageURL: 'https://randomuser.me/api/portraits/men/51.jpg',
+  gpa: 4.0,
+  campusId: 2
+},
+{
+  firstName: 'William',
+  lastName: 'Webpack',
+  email: 'will_webpack_123454332@gmail.com',
+  imageURL: 'https://randomuser.me/api/portraits/men/82.jpg',
+  gpa: 3.7,
+  campusId: 3
+},
+{
+  firstName: 'Alex',
+  lastName: 'Styles',
+  email: 'alex_styles_123454332@gmail.com',
+  imageURL: 'https://randomuser.me/api/portraits/men/62.jpg',
+  gpa: 2.9,
+  campusId: 1
+},
+{
+  firstName: 'Peter',
+  lastName: 'Postgres',
+  email: 'peter_postgres_123454332@gmail.com',
+  imageURL: 'https://randomuser.me/api/portraits/men/79.jpg',
+  gpa: 2.8,
+  campusId: 3
+},
+{
+  firstName: 'Fred',
+  lastName: 'Function',
+  email: 'fred_function_123454332@gmail.com',
+  imageURL: 'https://randomuser.me/api/portraits/men/24.jpg',
+  gpa: 3.4,
+  campusId: 1
+},
+{
+  firstName: 'Bobby',
+  lastName: 'Babel',
+  email: 'bobby_babel_123454332@gmail.com',
+  imageURL: 'https://randomuser.me/api/portraits/men/36.jpg',
+  gpa: 3.1,
+  campusId: 2
+}]
+
 const seed = async () => {
 	try {
 		await db.sync({force: true})
-	  await Promise.all(students.map(async student => {
-	    await Student.create(student)
-	  }))
     await Promise.all(campuses.map(async campus => {
       await Campus.create(campus)
     }))
+	  await Promise.all(students.map(async student => {
+	    await Student.create(student)
+	  }))
   } catch(err) {
     console.error(err)
   }

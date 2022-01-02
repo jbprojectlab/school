@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {getCampuses} from '../reducers/campus'
+import {getCampuses} from '../reducers/campuses'
 
 class Campuses extends Component {
 	componentDidMount() {
@@ -9,14 +10,17 @@ class Campuses extends Component {
 
 	render() {
 		const {campuses} = this.props
+
 		return (
       <div className="campus-list">
         <h3>Campuses:</h3>
         <ul>
           {campuses && campuses.map(campus => (
             <li key={campus.id}>
-              <h4>{campus.name}</h4>
-              <img src={campus.imageURL} />
+              <Link to={`/campuses/${campus.id}`}>
+                <h4>{campus.name}</h4>
+                <img src={campus.imageURL} />
+              </Link>
             </li>
           ))}
         </ul>
