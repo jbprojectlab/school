@@ -1,7 +1,7 @@
 {
-  "name": "senior-enrichment",
+  "name": "school",
   "version": "0.0.1",
-  "description": "A review time project",
+  "description": "School directory based on Fullstack Academy Senior-Enrichment project",
   "main": "index.js",
   "scripts": {
     "start:dev": "npm run build-watch & npm run start-server",
