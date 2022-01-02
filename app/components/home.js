@@ -1,23 +1,11 @@
 import React from 'react'
-// import Routes from '../routes'
-// import {Home} from './components/home'
-import {Route, Switch} from 'react-router-dom'
-import Campuses from './campuses'
-import {Students} from './students'
+import {Link} from 'react-router-dom'
 
 const Home = (props) => {
   return (
     <div>
-      <nav>
-        Welcome!
-      </nav>
-      <main>
-        <h1>Welcome to the Simba School of JavaScript!</h1>
-        <Switch>
-          <Route exact path='/campuses' component={Campuses} />
-          <Route exact path='/students' component={Students} />
-        </Switch>
-      </main>
+      <h1>Welcome to the Simba School of JavaScript!</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla egestas dui eget mollis. Etiam tincidunt tincidunt orci ut feugiat. Nunc justo enim, feugiat vel eleifend in, egestas id velit. Fusce ultrices convallis nunc, sit amet vestibulum odio auctor in. Morbi id neque volutpat urna commodo venenatis. Quisque sed turpis et quam semper posuere id non sapien. Nam ullamcorper tincidunt lectus, commodo varius ipsum facilisis ac. Nunc dapibus est nisi, ut ultrices tellus rutrum quis.</p>
     </div>
   )
 }

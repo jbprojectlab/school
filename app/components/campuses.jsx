@@ -10,11 +10,11 @@ class Campuses extends Component {
 	render() {
 		const {campuses} = this.props
 		return (
-      <div>
-        <h3>Campuses:  </h3>
+      <div className="campus-list">
+        <h3>Campuses:</h3>
         <ul>
           {campuses && campuses.map(campus => (
-            <li>
+            <li key={campus.id}>
               <h4>{campus.name}</h4>
               <img src={campus.imageURL} />
             </li>

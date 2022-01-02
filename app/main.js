@@ -4,12 +4,12 @@ import {Router} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import history from './history'
 import store from './store'
-import Home from './components/home'
+import Root from './components/root'
 
 render(
   <Provider store={store}>
     <Router history={history}>
-      <Home />
+      <Root />
     </Router>
   </Provider>,
   document.getElementById('main')
