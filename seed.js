@@ -37,40 +37,40 @@ const students = [{
 }]
 
 const campuses = [{
-  name: 'School of Nick',
-  imageURL: 'https://i.ytimg.com/vi/IrHeLbaQmrU/maxresdefault.jpg',
-  address: '123 Nick Street',
-  description: 'Main Campus of the School of Nick'
+  name: 'Beach Campus',
+  imageURL: 'https://indianharbourbeach.org/vertical/Sites/%7B427C9040-E7BF-47FF-B72A-4E9FC9F68BCE%7D/uploads/sathigh-1170x420.jpg',
+  address: '123 Beach Street',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla egestas dui eget mollis. Etiam tincidunt tincidunt orci ut feugiat. Nunc justo enim, feugiat vel eleifend in, egestas id velit. Fusce ultrices convallis nunc, sit amet vestibulum odio auctor in. Morbi id neque volutpat urna commodo venenatis. Quisque sed turpis et quam semper posuere id non sapien. Nam ullamcorper tincidunt lectus, commodo varius ipsum facilisis ac. Nunc dapibus est nisi, ut ultrices tellus rutrum quis.'
 },
 {
   name: 'Mansion Campus',
-  imageURL: 'https://cdn.vox-cdn.com/thumbor/bc87DQxbEoZpr1bLLFde4RezlWo=/17x0:622x454/1200x800/filters:focal(17x0:622x454)/cdn.vox-cdn.com/uploads/chorus_image/image/47962361/nic_20cage.0.jpg',
+  imageURL: 'https://indianharbourbeach.org/vertical/Sites/%7B427C9040-E7BF-47FF-B72A-4E9FC9F68BCE%7D/uploads/sathigh-1170x420.jpg',
   address: 'Campus of Cages, 17 Cage Courtyard',
   description: 'Home to all posh future Cage de Nicolas'
 },
 {
-  name: 'Saint Nicolas House of Worship & Javascript',
-  imageURL: 'https://i.pinimg.com/originals/0a/37/1d/0a371dc71093515336bbec15f837bce2.jpg',
-  address: '14 Saint Nicolas Way, VatiNic City',
-  description: `Those who praise the holy Nick come here to study the scripture`
+  name: 'Forest Campus',
+  imageURL: 'https://indianharbourbeach.org/vertical/Sites/%7B427C9040-E7BF-47FF-B72A-4E9FC9F68BCE%7D/uploads/sathigh-1170x420.jpg',
+  address: '14 Forest Lane',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla egestas dui eget mollis. Etiam tincidunt tincidunt orci ut feugiat. Nunc justo enim, feugiat vel eleifend in, egestas id velit. Fusce ultrices convallis nunc, sit amet vestibulum odio auctor in. Morbi id neque volutpat urna commodo venenatis. Quisque sed turpis et quam semper posuere id non sapien. Nam ullamcorper tincidunt lectus, commodo varius ipsum facilisis ac. Nunc dapibus est nisi, ut ultrices tellus rutrum quis.'
 },
 {
   name: 'Island Campus',
-  imageURL: 'http://d29l8fj0bhi1tg.cloudfront.net/wp-content/uploads/2017/03/14131325/Nicolas-Cage-Islands.jpg',
+  imageURL: 'https://indianharbourbeach.org/vertical/Sites/%7B427C9040-E7BF-47FF-B72A-4E9FC9F68BCE%7D/uploads/sathigh-1170x420.jpg',
   address: '18 Beachside Javascript Lane, Port of St. Nicolas Islands',
-  description: `Learn Javascipt with Nick, all the while sipping Pina Coladas out of a Cocunut`
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla egestas dui eget mollis. Etiam tincidunt tincidunt orci ut feugiat. Nunc justo enim, feugiat vel eleifend in, egestas id velit. Fusce ultrices convallis nunc, sit amet vestibulum odio auctor in. Morbi id neque volutpat urna commodo venenatis. Quisque sed turpis et quam semper posuere id non sapien. Nam ullamcorper tincidunt lectus, commodo varius ipsum facilisis ac. Nunc dapibus est nisi, ut ultrices tellus rutrum quis.'
 },
 {
-  name: `Omnipotent Nick's School of Code`,
-  imageURL: 'http://www.foxradionetwork.com/s/claudia-house-cage.jpg',
+  name: `Mountain Campus`,
+  imageURL: 'https://indianharbourbeach.org/vertical/Sites/%7B427C9040-E7BF-47FF-B72A-4E9FC9F68BCE%7D/uploads/sathigh-1170x420.jpg',
   address: '1 Nick Road, Everywhere, Universe',
-  description: 'The only place to learn Javascript, from the only one who knows -- Nick Cage'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla egestas dui eget mollis. Etiam tincidunt tincidunt orci ut feugiat. Nunc justo enim, feugiat vel eleifend in, egestas id velit. Fusce ultrices convallis nunc, sit amet vestibulum odio auctor in. Morbi id neque volutpat urna commodo venenatis. Quisque sed turpis et quam semper posuere id non sapien. Nam ullamcorper tincidunt lectus, commodo varius ipsum facilisis ac. Nunc dapibus est nisi, ut ultrices tellus rutrum quis.'
 },
 {
-  name: `St. Nick's Javascript Workshop`,
-  imageURL: 'https://www.santaclaushouse.com/public/images/pictures/sch_winter_2010.jpg',
+  name: `Desert Campus`,
+  imageURL: 'https://indianharbourbeach.org/vertical/Sites/%7B427C9040-E7BF-47FF-B72A-4E9FC9F68BCE%7D/uploads/sathigh-1170x420.jpg',
   address: 'The North Pole, P.O. Box 01',
-  description: `Learn to make toys, websites, and apps. Meet actual reindeer, while watching the hit film 'Reindeer Games'`
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla egestas dui eget mollis. Etiam tincidunt tincidunt orci ut feugiat. Nunc justo enim, feugiat vel eleifend in, egestas id velit. Fusce ultrices convallis nunc, sit amet vestibulum odio auctor in. Morbi id neque volutpat urna commodo venenatis. Quisque sed turpis et quam semper posuere id non sapien. Nam ullamcorper tincidunt lectus, commodo varius ipsum facilisis ac. Nunc dapibus est nisi, ut ultrices tellus rutrum quis.'
 }]
 
 const seed = async () => {
