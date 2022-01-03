@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import CampusForm from './campus-form'
-import {getCampuses} from '../reducers/campuses'
+import {getCampuses, removeCampus} from '../reducers/campuses'
 
 class Campuses extends Component {
   constructor() {
@@ -31,7 +31,7 @@ class Campuses extends Component {
   }
 
 	render() {
-		const {campuses} = this.props
+		const {campuses, deleteCampus} = this.props
     const {formOpen} = this.state
     const {openAddCampusForm, closeAddCampusForm} = this
 
@@ -49,6 +49,7 @@ class Campuses extends Component {
                 <h4>{campus.name}</h4>
                 <img src={campus.imageURL} />
               </Link>
+              <button onClick={() => deleteCampus(campus.id)}>&times;</button>
             </li>
           ))}
         </ul>
@@ -58,6 +59,9 @@ class Campuses extends Component {
 }
 
 const mapStateToProps = ({campuses}) => ({campuses})
-const mapDispatchToProps = (dispatch) => ({fetchCampuses: () => dispatch(getCampuses())})
+const mapDispatchToProps = (dispatch) => ({
+  fetchCampuses: () => dispatch(getCampuses()),
+  deleteCampus: (id) => dispatch(removeCampus(id))
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Campuses)

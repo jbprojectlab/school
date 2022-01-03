@@ -4,6 +4,7 @@ import history from '../history'
 const GET_CAMPUSES = 'GET_CAMPUSES'
 const GET_CAMPUS = 'GET_CAMPUS'
 const ADD_CAMPUS = 'ADD_CAMPUS'
+const REMOVE_CAMPUS = 'REMOVE_CAMPUS'
 
 const gotCampuses = (campuses) => {
   return {
@@ -26,6 +27,13 @@ const addedCampus = (campus) => {
   }
 }
 
+const removedCampus = (id) => {
+  return {
+    type: 'REMOVE_CAMPUS',
+    id
+  }
+}
+
 export const getCampuses = () => {
   return async (dispatch) => {
     const {data} = await axios.get('/api/campuses')
@@ -44,7 +52,13 @@ export const addCampus = (campusData) => {
   return async (dispatch) => {
     const {data} = await axios.post('/api/campuses', campusData)
     dispatch(addedCampus(data))
-    history.push('/campuses')
+  }
+}
+
+export const removeCampus = (id) => {
+  return async (dispatch) => {
+    await axios.delete(`/api/campuses/${id}`)
+    dispatch(removedCampus(id))
   }
 }
 
@@ -71,6 +85,9 @@ const campusReducer = (state = initialState, action) => {
     }
     case ADD_CAMPUS: {
       return [...state, action.campus]
+    }
+    case REMOVE_CAMPUS: {
+      return state.filter(campus => campus.id !== action.id)
     }
     default:
       return state

@@ -84,11 +84,11 @@ Congrats! You have completed your second vertical slice! Make sure to `commit -m
   - [--] Make an AJAX request that causes the new campus to be persisted in the database
   - [--] Add the new campus to the list of campuses without needing to refresh the page
 
-- [ ] Write a component to display a form for adding a new student that contains inputs for _at least_ first name, last name and email
-- [ ] Display this component EITHER as part of the all-students view, or as its own view
-- [ ] Submitting the form with a valid first name/last name/email should:
-  - [ ] Make an AJAX request that causes the new student to be persisted in the database
-  - [ ] Add the new student to the list of students without needing to refresh the page
+- [--] Write a component to display a form for adding a new student that contains inputs for _at least_ first name, last name and email
+- [--] Display this component EITHER as part of the all-students view, or as its own view
+- [--] Submitting the form with a valid first name/last name/email should:
+  - [--] Make an AJAX request that causes the new student to be persisted in the database
+  - [--] Add the new student to the list of students without needing to refresh the page
 
 Congrats! You have completed your third vertical slice! Make sure to `commit -m "Feature: Add Campus and Student"` before moving on (see `RUBRIC.md` - points are awarded/deducted for a proper git workflow)!
 
@@ -101,20 +101,20 @@ Congrats! You have completed your third vertical slice! Make sure to `commit -m 
 
 #### Backend
 
-- [ ] Write a route to remove a campus (based on its id)
-- [ ] Write a route to remove a student (based on their id)
+- [--] Write a route to remove a campus (based on its id)
+- [--] Write a route to remove a student (based on their id)
 
 #### Frontend
 
-- [ ] In the all-campuses view, include an `X` button next to each campus
-- [ ] Clicking the `X` button should:
-  - [ ] Make an AJAX request that causes that campus to be removed from database
-  - [ ] Remove the campus from the list of campuses without needing to refresh the page
+- [--] In the all-campuses view, include an `X` button next to each campus
+- [--] Clicking the `X` button should:
+  - [--] Make an AJAX request that causes that campus to be removed from database
+  - [--] Remove the campus from the list of campuses without needing to refresh the page
 
-- [ ] In the all-students view, include an `X` button next to each student
-- [ ] Clicking the `X` button should:
-  - [ ] Make an AJAX request that causes that student to be removed from database
-  - [ ] Remove the student from the list of students without needing to refresh the page
+- [--] In the all-students view, include an `X` button next to each student
+- [--] Clicking the `X` button should:
+  - [--] Make an AJAX request that causes that student to be removed from database
+  - [--] Remove the student from the list of students without needing to refresh the page
 
 Congrats! You have completed your fourth vertical slice! Make sure to `commit -m "Feature: Remove Campus and Student"` before moving on (see `RUBRIC.md` - points are awarded/deducted for a proper git workflow)!
 

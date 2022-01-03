@@ -3,6 +3,7 @@ import axios from 'axios'
 const GET_STUDENTS = 'GET_STUDENTS'
 const GET_STUDENT = 'GET_STUDENT'
 const ADD_STUDENT = 'ADD_STUDENT'
+const REMOVE_STUDENT = 'REMOVE_STUDENT'
 
 const gotStudents = (students) => {
   return {
@@ -25,6 +26,13 @@ const addedStudent = (student) => {
   }
 }
 
+const removedStudent = (id) => {
+  return {
+    type: 'REMOVE_STUDENT',
+    id
+  }
+}
+
 export const getStudents = () => {
   return async (dispatch) => {
     const {data} = await axios.get('/api/students')
@@ -43,6 +51,13 @@ export const addStudent = (studentData) => {
   return async (dispatch) => {
     const {data} = await axios.post('/api/students', studentData)
     dispatch(addedStudent(data))
+  }
+}
+
+export const removeStudent = (id) => {
+  return async (dispatch) => {
+    await axios.delete(`/api/students/${id}`)
+    dispatch(removedStudent(id))
   }
 }
 
@@ -69,6 +84,9 @@ const studentReducer = (state = initialState, action) => {
     }
     case ADD_STUDENT: {
       return [...state, action.student]
+    }
+    case REMOVE_STUDENT: {
+      return state.filter(student => student.id !== action.id)
     }
     default:
       return state
