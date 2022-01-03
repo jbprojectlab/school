@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {addCampus, campusSelector} from '../reducers/campuses'
+import {addCampus} from '../reducers/campuses'
 
 class CampusForm extends Component {
   constructor() {

@@ -18,7 +18,7 @@ const gotStudent = (student) => {
   }
 }
 
-const addedStudent = (studentData) => {
+const addedStudent = (student) => {
   return {
     type: 'ADD_STUDENT',
     student

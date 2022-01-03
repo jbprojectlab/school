@@ -29,11 +29,10 @@ router.get('/:id', async (req, res, next) => {
 })
 
 router.post('/', async (req, res, next) => {
-  console.log('STUDENT REQ BODY:  ', req.body)
   const {firstName, lastName, email, imageURL, gpa} = req.body
   try {
 		const student = await Student.create({
-			fistName,
+			firstName,
       lastName,
       email,
       imageURL,
