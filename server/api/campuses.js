@@ -28,4 +28,19 @@ router.get('/:id', async (req, res, next) => {
   }
 })
 
+router.post('/', async (req, res, next) => {
+  const {name, imageURL, address, description} = req.body
+  try {
+		const campus = await Campus.create({
+			name,
+      imageURL,
+      address,
+      description
+		})
+    res.status(201).json(campus)
+  } catch(err) {
+    next(err)
+  }
+})
+
 module.exports = router

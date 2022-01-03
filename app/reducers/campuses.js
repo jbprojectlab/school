@@ -1,7 +1,9 @@
 import axios from 'axios'
+import history from '../history'
 
 const GET_CAMPUSES = 'GET_CAMPUSES'
 const GET_CAMPUS = 'GET_CAMPUS'
+const ADD_CAMPUS = 'ADD_CAMPUS'
 
 const gotCampuses = (campuses) => {
   return {
@@ -17,6 +19,13 @@ const gotCampus = (campus) => {
   }
 }
 
+const addedCampus = (campus) => {
+  return {
+    type: 'ADD_CAMPUS',
+    campus
+  }
+}
+
 export const getCampuses = () => {
   return async (dispatch) => {
     const {data} = await axios.get('/api/campuses')
@@ -28,6 +37,14 @@ export const getCampus = (id) => {
   return async (dispatch) => {
     const {data} = await axios.get(`/api/campuses/${id}`)
     dispatch(gotCampus(data))
+  }
+}
+
+export const addCampus = (campusData) => {
+  return async (dispatch) => {
+    const {data} = await axios.post('/api/campuses', campusData)
+    dispatch(addedCampus(data))
+    history.push('/campuses')
   }
 }
 
@@ -51,6 +68,9 @@ const campusReducer = (state = initialState, action) => {
       } else {
         return [...state, action.campus]
       }
+    }
+    case ADD_CAMPUS: {
+      return [...state, action.campus]
     }
     default:
       return state

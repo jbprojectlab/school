@@ -2,6 +2,7 @@ import axios from 'axios'
 
 const GET_STUDENTS = 'GET_STUDENTS'
 const GET_STUDENT = 'GET_STUDENT'
+const ADD_STUDENT = 'ADD_STUDENT'
 
 const gotStudents = (students) => {
   return {
@@ -17,6 +18,13 @@ const gotStudent = (student) => {
   }
 }
 
+const addedStudent = (studentData) => {
+  return {
+    type: 'ADD_STUDENT',
+    student
+  }
+}
+
 export const getStudents = () => {
   return async (dispatch) => {
     const {data} = await axios.get('/api/students')
@@ -28,6 +36,13 @@ export const getStudent = (id) => {
   return async (dispatch) => {
     const {data} = await axios.get(`/api/students/${id}`)
     dispatch(gotStudent(data))
+  }
+}
+
+export const addStudent = (studentData) => {
+  return async (dispatch) => {
+    const {data} = await axios.post('/api/students', studentData)
+    dispatch(addedStudent(data))
   }
 }
 
@@ -51,6 +66,9 @@ const studentReducer = (state = initialState, action) => {
       } else {
         return [...state, action.student]
       }
+    }
+    case ADD_STUDENT: {
+      return [...state, action.student]
     }
     default:
       return state
