@@ -46,7 +46,9 @@ class Student extends Component {
           )}
         </div>
       </div>
-    ) : null
+    ) : (
+      <div>No Student Found</div>
+    )
   }
 }
 

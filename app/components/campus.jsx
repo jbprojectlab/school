@@ -35,7 +35,9 @@ class Campus extends Component {
           </ul>
         </div>
       </div>
-    ) : null
+    ) : (
+      <div>No Campus Found</div>
+    )
   }
 }
 

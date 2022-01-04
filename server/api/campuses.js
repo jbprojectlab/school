@@ -22,7 +22,11 @@ router.get('/:id', async (req, res, next) => {
         }
 			}]
 		})
-    res.json(campus)
+    if(campus) {
+      res.json(campus)
+    } else {
+      res.sendStatus(404)
+    }
   } catch(err) {
     next(err)
   }

@@ -14,15 +14,19 @@ router.get('/:id', async (req, res, next) => {
   const {id} = req.params
   try {
     const student = await Student.findById(id)
-    const {campusId} = student
-    const studentWithCampus = await Student.findOne({
-      where: {id},
-      include: [{
-        model: Campus,
-        where: {id: campusId}
-      }]
-    })
-    res.json(studentWithCampus)
+    if(student) {
+      const {campusId} = student
+        const studentWithCampus = await Student.findOne({
+        where: {id},
+        include: [{
+          model: Campus,
+          where: {id: campusId}
+        }]
+      })
+      res.json(studentWithCampus)
+    } else {
+      res.sendStatus(404)
+    }
   } catch(err) {
     next(err)
   }
