@@ -1,4 +1,4 @@
-# Senior Enrichment Project
+# School
 
 ## Getting started
 
